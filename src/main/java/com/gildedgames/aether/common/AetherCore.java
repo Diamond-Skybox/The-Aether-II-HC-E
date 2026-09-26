@@ -16,7 +16,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @Mod(name = AetherCore.MOD_NAME, modid = AetherCore.MOD_ID, version = AetherCore.MOD_VERSION,
-		certificateFingerprint = AetherCore.MOD_FINGERPRINT,
 		dependencies = AetherCore.MOD_DEPENDENCIES)
 public class AetherCore
 {

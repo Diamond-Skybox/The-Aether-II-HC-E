@@ -13,6 +13,11 @@ public class ClientNetworkStateListener
 	@SubscribeEvent
 	public static void onClientJoinServer(FMLNetworkEvent.ClientConnectedToServerEvent event)
 	{
+		if (AetherCore.ANALYTICS == null)
+		{
+			return;
+		}
+
 		GAUser user = AetherCore.ANALYTICS.getUser();
 		user.startSession(AetherCore.ANALYTICS);
 	}
@@ -20,6 +25,11 @@ public class ClientNetworkStateListener
 	@SubscribeEvent
 	public static void onClientLeaveServer(FMLNetworkEvent.ClientDisconnectionFromServerEvent event)
 	{
+		if (AetherCore.ANALYTICS == null)
+		{
+			return;
+		}
+
 		GAUser user = AetherCore.ANALYTICS.getUser();
 		user.endSession(AetherCore.ANALYTICS);
 

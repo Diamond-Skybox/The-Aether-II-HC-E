@@ -2,7 +2,7 @@ package com.gildedgames.aether.common.init;
 
 import com.gildedgames.aether.common.entities.tiles.*;
 import com.gildedgames.aether.common.entities.tiles.multiblock.TileEntityMultiblockDummy;
-import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraft.tileentity.TileEntity;
 
 public class TileEntitiesAether
 {
@@ -25,20 +25,20 @@ public class TileEntitiesAether
 
 	public static void preInit()
 	{
-		GameRegistry.registerTileEntity(TileEntityAltar.class, ALTAR_ID);
-		GameRegistry.registerTileEntity(TileEntityHolystoneFurnace.class, HOLYSTONE_FURNACE_ID);
-		GameRegistry.registerTileEntity(TileEntitySkyrootChest.class, SKYROOT_CHEST_ID);
-		GameRegistry.registerTileEntity(TileEntitySkyrootSign.class, SKYROOT_SIGN_ID);
-		GameRegistry.registerTileEntity(TileEntityMultiblockDummy.class, MULTIBLOCK_DUMMY);
-		GameRegistry.registerTileEntity(TileEntityMoaEgg.class, MOA_EGG_ID);
-		GameRegistry.registerTileEntity(TileEntityIcestoneCooler.class, ICESTONE_COOLER_ID);
-		GameRegistry.registerTileEntity(TileEntityIncubator.class, INCUBATOR_ID);
-		GameRegistry.registerTileEntity(TileEntityPresent.class, PRESENT_ID);
-		GameRegistry.registerTileEntity(TileEntityWildcard.class, WILDCARD_ID);
-		GameRegistry.registerTileEntity(TileEntityMasonryBench.class, MASONRY_BENCH_ID);
-		GameRegistry.registerTileEntity(TileEntityOutpostCampfire.class, OUTPOST_CAMPFIRE_ID);
-		GameRegistry.registerTileEntity(TileEntityTeleporter.class, TELEPORTER_ID);
-		GameRegistry.registerTileEntity(TileEntitySkyrootBed.class, SKYROOT_BED_ID);
+		TileEntity.register(ALTAR_ID, TileEntityAltar.class);
+		TileEntity.register(HOLYSTONE_FURNACE_ID, TileEntityHolystoneFurnace.class);
+		TileEntity.register(SKYROOT_CHEST_ID, TileEntitySkyrootChest.class);
+		TileEntity.register(SKYROOT_SIGN_ID, TileEntitySkyrootSign.class);
+		TileEntity.register(MULTIBLOCK_DUMMY, TileEntityMultiblockDummy.class);
+		TileEntity.register(MOA_EGG_ID, TileEntityMoaEgg.class);
+		TileEntity.register(ICESTONE_COOLER_ID, TileEntityIcestoneCooler.class);
+		TileEntity.register(INCUBATOR_ID, TileEntityIncubator.class);
+		TileEntity.register(PRESENT_ID, TileEntityPresent.class);
+		TileEntity.register(WILDCARD_ID, TileEntityWildcard.class);
+		TileEntity.register(MASONRY_BENCH_ID, TileEntityMasonryBench.class);
+		TileEntity.register(OUTPOST_CAMPFIRE_ID, TileEntityOutpostCampfire.class);
+		TileEntity.register(TELEPORTER_ID, TileEntityTeleporter.class);
+		TileEntity.register(SKYROOT_BED_ID, TileEntitySkyrootBed.class);
 	}
 
 }
